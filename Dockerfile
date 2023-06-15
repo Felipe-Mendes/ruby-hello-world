@@ -4,8 +4,8 @@ EXPOSE 8080
 ENV RACK_ENV production
 ENV RAILS_ENV production
 USER root
-RUN yum install -y nfs-utils ; \
-    mkdir /ruby-page ; \
+# yum install -y nfs-utils ;
+RUN  mkdir /ruby-page ; \
     curl -o /opt/app-root/src/Anbile-Tower-strategy.png "https://www.redhat.com/sysadmin/sites/default/files/styles/embed_large/public/2019-09/Anbile-Tower-strategy.png" ;
 USER default
 COPY . /opt/app-root/src/
